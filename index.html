@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Haluk Levent Hapiste mi? Ne zaman serbest kalacak? Neden içerde?">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Haluk Levent Hapiste mi?</title>
+      <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAlJOSACU+WQD6+/wAjrvtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQAAAQABAAEDAQMBAAEAAQAAAAEAAQABAAEAAQABAAEAAAABAAEAAQMBAwEAAQABAAAAAQABBAQAAQAEBAEAAQAAAAEAAQQEAwEDBAQBAAEAAAABAAEEBAABAAQEAQABAAAAAQABAAEEAQQBAAEAAQAAAAEAAQABBAEEAQABAAEAAAABAAEAAQQBBAEAAQABAAAAAQABAAECAQIBAAEAAQAAAAEAAQABAAEAAQABAAEAAAABAAEAAQABAAEAAQABAAABAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAAABAAAAAQAAqCsAAKgrAACoKwAAoAsAAKALAACgCwAAqCsAAKgrAACoKwAAqCsAAKqrAACqqwAAAAEAAAABAAA=" rel="icon" type="image/x-icon" />
+      <style>
+      html,body,h1{
+        padding: 0;
+        margin:0;
+      }
+      </style>
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+      <script type="text/javascript" src="http://rawgithub.com/davatron5000/FitText.js/master/jquery.fittext.js"></script>
+  </head>
+  <body style="background:#ddd;text-align:center">
+    <h1>Hayır</h1>
+    <br />
+    <div id="video">
+      <iframe src="http://www.youtube.com/embed/SFaBXdeeXlE" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h3>Toplam Ziyaretçi: </h3>
+    <script type="text/javascript">
+    $(function(){
+      $("h1").fitText(0.273);
+      $("h3").fitText(2);
+      $('#video').fitVids();
+      $.ajax({
+        url: 'http://halukleventhapistemi.tk/counter.php',
+        type: 'post',
+        dataType:'json',
+        success: function(data){
+          console.log(data);
+          $("h3").append(data["counter"]);
+        }
+      })
+      
+    });
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-45927267-1', 'halukleventhapistemi.tk');
+        ga('send', 'pageview');
+    </script>
+  </body>
+</html>
